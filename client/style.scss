@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+#canvas {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+// Importante colores!!!
+$outlineCol: "#fff";
+$bgCol: '#000';
+
+#title {
+  font-size: 5px;
+  color: '#fff';
+}
+
+
+/*
+body {
+  background-color:bgCol; 
+  color:outlineCol;
+}
+
+
+.button {
+  display:inline-block;
+  font-size:24px;
+  padding:4px 8px;
+}
+
+nav {
+  background-color:bgCol;
+  padding:1em;
+  ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+    li {
+      display:inline-block;
+    }
+  }
+}
+
+*/
