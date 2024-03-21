@@ -19,20 +19,40 @@ html {
 /* FONTS */
 
 @font-face {
-  font-family: "Jay Gothic URW";
-  src: "https://fonts.adobe.com/fonts/jay-gothic-urw#fonts-section";
+  font-family: "URW Jay Gothic W01 Regular";
+  src: url("https://db.onlinewebfonts.com/t/acd7f73b9972f449979c6e8ac0cd6d5d.eot");
+  src: url("https://db.onlinewebfonts.com/t/acd7f73b9972f449979c6e8ac0cd6d5d.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/acd7f73b9972f449979c6e8ac0cd6d5d.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/acd7f73b9972f449979c6e8ac0cd6d5d.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/acd7f73b9972f449979c6e8ac0cd6d5d.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/acd7f73b9972f449979c6e8ac0cd6d5d.svg#URW Jay Gothic W01 Regular")format("svg");
 }
 
 @font-face {
-  font-family: "Monte Stella";
-  src: "https://fonts.adobe.com/fonts/monte-stella";
+  font-family: "Monte Stella Trial Light";
+  src: url("https://db.onlinewebfonts.com/t/21ae87f65567bda43d77c68ae7478930.eot");
+  src: url("https://db.onlinewebfonts.com/t/21ae87f65567bda43d77c68ae7478930.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/21ae87f65567bda43d77c68ae7478930.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/21ae87f65567bda43d77c68ae7478930.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/21ae87f65567bda43d77c68ae7478930.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/21ae87f65567bda43d77c68ae7478930.svg#Monte Stella Trial Light")format("svg");
+}
+
+@font-face {
+  font-family: "FSP DEMO - Bebas Neue Pro Light";
+  src: url("https://db.onlinewebfonts.com/t/5fd03961d9ff00b65b9b446fe2034712.eot");
+  src: url("https://db.onlinewebfonts.com/t/5fd03961d9ff00b65b9b446fe2034712.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/5fd03961d9ff00b65b9b446fe2034712.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/5fd03961d9ff00b65b9b446fe2034712.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/5fd03961d9ff00b65b9b446fe2034712.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/5fd03961d9ff00b65b9b446fe2034712.svg#FSP DEMO - Bebas Neue Pro Light")format("svg");
 }
 
 /* COMPONENTS */
 
 #title {
-  font-family: "Jay Gothic URW", Regular;
-  font-size: 150px;
+  font-family: "URW Jay Gothic W01 Regular";
+  font-size: 240px;
   color: #E6FFFB;
   text-align: center;
   position: relative;
@@ -40,19 +60,22 @@ html {
 }
 
 #sub {
-  font-family: "Monte Stella", Light;
-  font-size: 40px;
+  font-family: "Monte Stella Trial Light";
+  font-size: 60px;
   color: #91B8BE;
   text-align: center;
   position: relative;
-  bottom: 700px;
-  right: -620px
+  margin: auto;
+  bottom: 630px; 
 }
 
-/*
-body {
-  background-color:bgCol; 
-  color:outlineCol;
+#proj {
+  font-family: "FSP DEMO - Bebas Neue Pro Light";
+  font-size: 40px;
+  color: #46FFF8;
+  text-align: center;
+  position: relative;
+  top: -1100px;
 }
 
 
