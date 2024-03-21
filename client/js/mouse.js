@@ -54,8 +54,8 @@ function handleParticle() {
         ctx.beginPath();
         ctx.strokeStyle = spots[i].color;
         ctx.linewidth = spots[i].size / 10;
-        ctx.moveTo(spots[i].x, spots[i].y);
-        ctx.lineTo(spots[i].x, spots[i].y);
+        ctx.moveTo(spots[i].x, spots[j].y);
+        ctx.lineTo(spots[i].x, spots[j].y);
         ctx.stroke();
       }
     }
