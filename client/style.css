@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   background-color: #0C1012;
 }
 
@@ -50,52 +50,54 @@ html {
 
 /* COMPONENTS */
 
+.titles {
+  text-align: center;
+}
+
+
 #title {
   font-family: "URW Jay Gothic W01 Regular";
   font-size: 240px;
   color: #E6FFFB;
-  text-align: center;
-  position: relative;
-  bottom: -50px;
+  position: absolute;
+  bottom: 150px;
+
 }
 
 #sub {
   font-family: "Monte Stella Trial Light";
   font-size: 60px;
   color: #91B8BE;
-  text-align: center;
-  position: relative;
-  margin: auto;
-  bottom: 630px; 
+  position: absolute;
+  bottom: -80px
 }
+
 
 #proj {
   font-family: "FSP DEMO - Bebas Neue Pro Light";
   font-size: 40px;
   color: #46FFF8;
   text-align: center;
-  position: relative;
-  top: -1100px;
+  position: absolute;
+  bottom: -650px
 }
 
-
-.button {
-  display:inline-block;
-  font-size:24px;
-  padding:4px 8px;
+#proj1  {
+  font-family: "URW Jay Gothic W01 Regular";
+  font-size: 150px;
+  color: #E6FFFB;
+  text-align: right;
+  position: absolute;
+  right: 150px;
+  bottom: -1000px;
 }
 
-nav {
-  background-color:bgCol;
-  padding:1em;
-  ul {
-    margin:0;
-    padding:0;
-    list-style:none;
-    li {
-      display:inline-block;
-    }
-  }
+#desc {
+  font-family: "Monte Stella Trial Light";
+  font-size: 60px;
+  color: #91B8BE;
+  text-align: right;
+  position: absolute;
+  right: 697px;
+  bottom: -1150px 
 }
-
-*/
