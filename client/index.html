@@ -31,6 +31,8 @@
 
     <div class="titles">
       <h1 id="title"> PANTHEON </h1>
+      <div class="outerDotsContainer">
+      <span class="dotsContainer">
         <span id="dotC1-1" class="dots"></span>
         <span id="dotC1-2" class="dots"></span>
         <span id="dotC1-3" class="dots"></span>
@@ -65,6 +67,8 @@
         <span id="dotT1-2" class="dots"></span>
         <span id="dotT1-3" class="dots"></span>
         <span id="dotT1-4" class="dots"></span>
+      </span>
+    </div>
 
       <h2 id="sub"> Cool and inspirational slogan. </h2>
     </div>
@@ -91,7 +95,7 @@
         .from('h2', { 'top': '730px', ease: "expo.out", duration: 1.0 }, "<+0.2")
         .to('h2', { 'opacity': '1', ease: "power4.inOut", duration: 1.5 }, "<")
 
-        .to('.dots', {x:0, y:0, overwrite: "none", ease: "expo.out", duration: 1.5}, "<+0.3")
+        .to('.dots', {y:'10px', overwrite: "none", ease: "expo.out", duration: 1.5}, "<+0.3")
         //.to('.dots', { 'opacity': '1', ease: "power4.inOut", duration: 2}, "<")
       });
 

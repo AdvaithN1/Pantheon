@@ -4,13 +4,22 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = 10 * window.innerHeight;
 let spots = [];
-let hue = 120;
+let bgspots = [];
+let hue = 130;
 var up = true;
 
 const mouse = {
     x: undefined,
     y: undefined
 }
+
+
+
+let connect = document.getElementsByClassName('dots');
+for (let i = 0; i < connect.length; i++) {
+    
+}
+
 
 body.addEventListener('mousemove', (event) => {
     let dx = mouse.x - window.scrollX - event.x;
@@ -35,7 +44,7 @@ body.addEventListener('mousedown', (event) => {
         spots.push(part);
     }
 
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 70; i++) {
         let part = new Particle();
         part.updateSpeed(10);
         spots.push(part);
@@ -49,6 +58,11 @@ class Particle {
         this.size = Math.random() * 2.5 + 0.1;
         this.updateSpeed(3);
         this.color = 'hsl(' + hue + ', 100%, 50%)';
+        this.change = 0.03;
+    }
+
+    updateDuration() {
+        this.change = 0.001
     }
 
     updateSpeed(speed) {
@@ -60,7 +74,7 @@ class Particle {
     update() {
         this.x += this.speedX;
         this.y += this.speedY;
-        if (this.size > 0.1) this.size -= 0.03;
+        if (this.size > 0.1) this.size -= this.change;
     }
 
     draw() {
@@ -79,7 +93,7 @@ function handleParticle() {
             const dx = spots[i].x - spots[j].x;
             const dy = spots[i].y - spots[j].y;
             const distance = Math.sqrt(dx * dx + dy * dy);
-            if (distance < 400) {
+            if (distance < 800) {
                 ctx.beginPath();
                 ctx.strokeStyle = spots[i].color;
                 ctx.lineWidth = spots[i].size / 9;
@@ -106,7 +120,7 @@ function animate() {
         hue++;
     } else {
         hue--;
-        if (hue == 120) {
+        if (hue == 130) {
             up = true;
         }
     }

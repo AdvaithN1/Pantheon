@@ -28,6 +28,12 @@
         socket.onopen = function(event) {
             console.log('WebSocket connection established');
         };
+        socket.onmessage = function(event) {
+            // 'event.data' contains the received data
+            console.log('Received data:', event.data);
+            // YUFAN DO STUFF HERE THIS IS THE DATA
+            
+        };
         
         // Send video stream to the server
         setInterval(function() {
@@ -38,9 +44,10 @@
             ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
             var data = canvas.toDataURL('image/jpeg');
             if(socket.readyState === socket.OPEN){
+                // console.log(data);
                 socket.send(data);
             }
-        }, 100); // Adjust the interval as needed
+        }, 1); // Adjust the interval as needed
     })
     .catch(function(err) {
         console.log("Error: " + err);
