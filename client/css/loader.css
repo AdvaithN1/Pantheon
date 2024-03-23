@@ -1,0 +1,86 @@
+
+
+.loader-wrapper {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: auto;
+    background: radial-gradient(#e97cf0, #b155dc, #640dc2);
+    background-size: 100% 100%;
+    animation: huerotate 5s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.loader-wrapper-outer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+    background-color: #141a19;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999 !important;
+}
+
+.loader {
+    display: inline-block;
+    margin: auto;
+    position: relative;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(130deg);
+    }
+
+    50% {
+        transform: rotate(150deg);
+    }
+
+    75% {
+        transform: rotate(150deg);
+    }
+
+    100% {
+        transform: rotate(150deg);
+    }
+}
+
+@keyframes huerotate {
+    0% {
+        -webkit-filter: hue-rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    25% {
+        -webkit-filter: hue-rotate(20deg);
+        transform: rotate(120deg);
+    }
+
+    50% {
+        -webkit-filter: hue-rotate(0deg);
+        transform: rotate(240deg);
+    }
+
+    75% {
+        -webkit-filter: hue-rotate(-20deg);
+        transform: rotate(360deg);
+    }
+
+    100% {
+        -webkit-filter: hue-rotate(0deg);
+        transform: rotate(120deg);
+    }
+}

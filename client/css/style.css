@@ -5,10 +5,10 @@
 }
 
 #canvas {
-  z-index: 1;
-  position: fixed;
+  z-index: 0;
+  position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 1000vh;
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -60,9 +60,9 @@ html {
 
 
 #title {
-  z-index: 0;
+  z-index: 100;
   font-family: "URW Jay Gothic W01 Regular";
-  font-size: 240px;
+  font-size: 280px;
   color: #E6FFFB;
   position: absolute;
   top: 100px;
@@ -70,13 +70,157 @@ html {
 
 }
 
+.dots {
+  z-index: 47;
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  display: inline-block;
+  position: absolute !important;
+}
+
+/* spacing 60 */
+
+/* C1 width 80 */ 
+
+#dotC1-1 {
+  top: 380px;
+  left: 300px;
+}
+
+#dotC1-2 {
+  top: 380px;
+  left: 380px;
+}
+
+#dotC1-3 {
+  top: 490px;
+  left: 300px;
+}
+
+#dotC1-4 {
+  top: 490px;
+  left: 380px;
+}
+
+/* O1 width 60*/
+
+#dotO1-1 {
+  top: 380px;
+  left: 440px;
+}
+
+#dotO1-2 {
+  top: 380px;
+  left: 500px;
+}
+
+#dotO1-3 {
+  top: 490px;
+  left: 440px;
+}
+
+#dotO1-4 {
+  top: 490px;
+  left: 500px;
+}
+
+/* N1 width 60*/
+
+#dotN1-1 {
+  top: 380px;
+  left: 560px;
+}
+
+#dotN1-2 {
+  top: 380px;
+  left: 620px;
+}
+
+#dotN1-3 {
+  top: 490px;
+  left: 560px;
+}
+
+#dotN1-4 {
+  top: 490px;
+  left: 620px;
+}
+
+/* N2 width 60*/
+
+#dotN2-1 {
+  top: 380px;
+  left: 680px;
+}
+
+#dotN2-2 {
+  top: 380px;
+  left: 740px;
+}
+
+#dotN2-3 {
+  top: 490px;
+  left: 680px;
+}
+
+#dotN2-4 {
+  top: 490px;
+  left: 740px;
+}
+
+/* E1 width 80*/
+
+#dotE1-1 {
+  top: 380px;
+  left: 800px;
+}
+
+#dotE1-2 {
+  top: 380px;
+  left: 880px;
+}
+
+#dotE1-3 {
+  top: 490px;
+  left: 800px;
+}
+
+#dotE1-4 {
+  top: 490px;
+  left: 880px;
+}
+
+/* C2 width 80*/
+
+#dotC2-1 {
+  top: 380px;
+  left: 940px;
+}
+
+#dotC2-2 {
+  top: 380px;
+  left: 1020px;
+}
+
+#dotC2-3 {
+  top: 490px;
+  left: 940px;
+}
+
+#dotC2-4 {
+  top: 490px;
+  left: 1020px;
+}
+
 #sub {
-  z-index: -1;
+  z-index: 99;
   font-family: "Monte Stella Trial Light";
   font-size: 60px;
   color: #91B8BE;
   position: absolute;
-  top: 330px;
+  top: 530px;
   opacity: 0;
 }
 

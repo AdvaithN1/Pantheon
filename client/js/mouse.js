@@ -2,9 +2,10 @@ const canvas = document.getElementById('canvas');
 const body = document.getElementById('*');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.height = 10 * window.innerHeight;
 let spots = [];
-let hue = 0;
+let hue = 120;
+var up = true;
 
 const mouse = {
     x: undefined,
@@ -12,12 +13,12 @@ const mouse = {
 }
 
 body.addEventListener('mousemove', (event) => {
-    let dx = mouse.x - event.x;
-    let dy = mouse.y - event.y;
+    let dx = mouse.x - window.scrollX - event.x;
+    let dy = mouse.y - window.scrollY - event.y;
     let dist = Math.sqrt(dx * dx + dy * dy);
     let count = Math.min(dist / 10 - Math.random() / 2, 3)
-    mouse.x = event.x;
-    mouse.y = event.y;
+    mouse.x = event.x + window.scrollX;
+    mouse.y = event.y + window.scrollY;
     for (let i = 0; i < count; i++) {
         let part = new Particle();
         part.updateSpeed(2 + dist / 50);
@@ -26,8 +27,8 @@ body.addEventListener('mousemove', (event) => {
 })
 
 body.addEventListener('mousedown', (event) => {
-    mouse.x = event.x;
-    mouse.y = event.y;
+    mouse.x = event.x + window.scrollX;
+    mouse.y = event.y + window.scrollY;
     for (let i = 0; i < 50; i++) {
         let part = new Particle();
         part.updateSpeed(70);
@@ -45,7 +46,7 @@ class Particle {
     constructor() {
         this.x = mouse.x;
         this.y = mouse.y;
-        this.size = Math.random() * 2 + 0.1;
+        this.size = Math.random() * 2.5 + 0.1;
         this.updateSpeed(3);
         this.color = 'hsl(' + hue + ', 100%, 50%)';
     }
@@ -78,10 +79,10 @@ function handleParticle() {
             const dx = spots[i].x - spots[j].x;
             const dy = spots[i].y - spots[j].y;
             const distance = Math.sqrt(dx * dx + dy * dy);
-            if (distance < 200) {
+            if (distance < 400) {
                 ctx.beginPath();
                 ctx.strokeStyle = spots[i].color;
-                ctx.lineWidth = spots[i].size / 10;
+                ctx.lineWidth = spots[i].size / 9;
                 ctx.moveTo(spots[i].x, spots[i].y);
                 ctx.lineTo(spots[j].x, spots[j].y);
                 ctx.stroke();
@@ -97,13 +98,26 @@ function handleParticle() {
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     handleParticle();
-    hue++;
+    
+    if (hue == 200) {
+        up = false;
+    }
+    if (up) { 
+        hue++;
+    } else {
+        hue--;
+        if (hue == 120) {
+            up = true;
+        }
+    }
+    
+    // im trying to make it go from greenish to blueish
     window.requestAnimationFrame(animate);
 }
 
 window.addEventListener('resize', function () {
     canvas.width = innerWidth;
-    canvas.height = innerHeight;
+    canvas.height = 10 * innerHeight;
 })
 
 window.addEventListener('mouseout', function () {
