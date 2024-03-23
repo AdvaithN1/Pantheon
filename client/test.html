@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webcam Streaming</title>
+<style>
+    #videoElement {
+        width: 400px;
+        height: 300px;
+        background-color: #666;
+    }
+</style>
+</head>
+<body>
+<div>
+    <video autoplay="true" id="videoElement"></video>
+</div>
+<script>
+    // Get access to the webcam
+    navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function(stream) {
+        var video = document.getElementById("videoElement");
+        video.srcObject = stream;
+        
+        // Set up the WebSocket connection
+        var socket = new WebSocket('ws://localhost:3000/ws');
+        socket.onopen = function(event) {
+            console.log('WebSocket connection established');
+        };
+        
+        // Send video stream to the server
+        setInterval(function() {
+            var canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            var ctx = canvas.getContext('2d');
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            var data = canvas.toDataURL('image/jpeg');
+            if(socket.readyState === socket.OPEN){
+                socket.send(data);
+            }
+        }, 100); // Adjust the interval as needed
+    })
+    .catch(function(err) {
+        console.log("Error: " + err);
+    });
+</script>
+</body>
+</html>

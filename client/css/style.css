@@ -62,7 +62,7 @@ html {
 #title {
   z-index: 100;
   font-family: "URW Jay Gothic W01 Regular";
-  font-size: 280px;
+  font-size: 300px;
   color: #E6FFFB;
   position: absolute;
   top: 100px;
@@ -76,9 +76,12 @@ html {
   width: 15px;
   border-radius: 15px;
   background-color: #ffffff;
-  display: inline-block;
   position: absolute !important;
+  opacity: 1;
+  transform: translate(125px, 10px);
 }
+
+
 
 /* spacing 60 */
 
@@ -213,6 +216,29 @@ html {
   top: 490px;
   left: 1020px;
 }
+
+/* T1 width 60*/
+
+#dotT1-1 {
+  top: 380px;
+  left: 1080px;
+}
+
+#dotT1-2 {
+  top: 380px;
+  left: 1140px;
+}
+
+#dotT1-3 {
+  top: 380px;
+  left: 1110px;
+}
+
+#dotT1-4 {
+  top: 490px;
+  left: 1110px;
+}
+
 
 #sub {
   z-index: 99;

@@ -61,6 +61,10 @@
         <span id="dotC2-3" class="dots"></span>
         <span id="dotC2-4" class="dots"></span>
 
+        <span id="dotT1-1" class="dots"></span>
+        <span id="dotT1-2" class="dots"></span>
+        <span id="dotT1-3" class="dots"></span>
+        <span id="dotT1-4" class="dots"></span>
 
       <h2 id="sub"> Cool and inspirational slogan. </h2>
     </div>
@@ -69,9 +73,10 @@
     <div id="desc"> Description... </div>
 
     <div id="team"> THE TEAM </div>
+    
 
     <div id="rect1"></div>
-
+    <a style="position:absolute;z-index: 100;" href = "test">TESTING PYTHON DONT DELETE</a>
     <!-- GSAP ANIMATIONS-->
 
     <script>
@@ -85,6 +90,9 @@
 
         .from('h2', { 'top': '730px', ease: "expo.out", duration: 1.0 }, "<+0.2")
         .to('h2', { 'opacity': '1', ease: "power4.inOut", duration: 1.5 }, "<")
+
+        .to('.dots', {x:0, y:0, overwrite: "none", ease: "expo.out", duration: 1.5}, "<+0.3")
+        //.to('.dots', { 'opacity': '1', ease: "power4.inOut", duration: 2}, "<")
       });
 
 
@@ -92,6 +100,7 @@
     <canvas id="canvas"> </canvas>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script id="mouse" src="./js/mouse.js"></script>
+    
 </body>
 
 </html>
