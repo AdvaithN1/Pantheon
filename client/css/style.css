@@ -17,8 +17,18 @@
 html {
   height: 100%;
   width: 100%;
-  background-color: #0C1012;
+  background-color: #0a0f14;
 }
+
+#glow {
+  position: fixed;
+  z-index: 150;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: screen;
+  background-image: linear-gradient(#00000000, #090f0ece);
+}
+
 
 /* FONTS */
 
@@ -92,7 +102,7 @@ html {
   border-radius: 15px;
   background-color: #ffffff;
   position: absolute !important;
-  opacity: 1;
+  opacity: 0;
   
   transform: translateY(40px); 
 
@@ -277,13 +287,58 @@ html {
   top: 750px
 }
 
+
+.descContainer {
+  position: relative;
+  
+}
+
+#desc, #proj1 {
+  position: absolute;
+}
+
+#proj1 {
+
+
+  font-family: "URW Jay Gothic W01 Light";
+  font-size: 150px;
+  color: #E6FFFB;
+  
+  top: 1400px;
+}
+
+#desc {
+
+
+  font-family: "Monte Stella Trial Light";
+  font-size: 60px;
+  color: #91B8BE;
+  
+  top: 1550px;
+}
+
+/*
+.descOuterContainer {
+  align-items: right;
+  width: 40vw;
+  position: absolute !important;
+  
+}
+
+.descContainer {
+  width: 0;
+  align-items: right;
+  margin-left: 900px;
+  position: absolute !important;
+}
+
 #proj1  {
   font-family: "URW Jay Gothic W01 Light";
   font-size: 150px;
   color: #E6FFFB;
-  text-align: right;
+  text-align: left;
   position: absolute;
-  right: 150px;
+
   top: 1200px;
 }
 
@@ -291,11 +346,12 @@ html {
   font-family: "Monte Stella Trial Light";
   font-size: 60px;
   color: #91B8BE;
-  text-align: right;
+  text-align: left;
   position: absolute;
-  right: 697px;
+  
   top: 1350px;
-}
+}*/
+
 
 #team {
   font-family: "URW Jay Gothic W01 Light";

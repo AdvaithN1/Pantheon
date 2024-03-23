@@ -7,9 +7,11 @@
     top: 0;
     left: 0;
     margin: auto;
-    background: radial-gradient(#e97cf0, #b155dc, #640dc2);
+    mix-blend-mode: light;
+    /*background: radial-gradient(#e97cf0, #b155dc, #640dc2);*/
+    background: linear-gradient(#8fff07, #008158ac, #00000000, #006d9bac, #2affd8);
     background-size: 100% 100%;
-    animation: huerotate 5s ease infinite;
+    animation: huerotate 3s ease-in-out infinite;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +25,8 @@
     top: 0;
     left: 0;
     margin: auto;
-    background-color: #141a19;
+    /*background-color: #101212;*/
+    background-image: linear-gradient(#0c0e0f, #161b1b);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,19 +45,19 @@
     }
 
     25% {
-        transform: rotate(130deg);
+        transform: rotate(180deg);
     }
 
     50% {
-        transform: rotate(150deg);
+        transform: rotate(180deg);
     }
 
     75% {
-        transform: rotate(150deg);
+        transform: rotate(180deg);
     }
 
     100% {
-        transform: rotate(150deg);
+        transform: rotate(180deg);
     }
 }
 
